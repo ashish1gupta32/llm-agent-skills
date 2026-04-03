@@ -27,6 +27,24 @@ Fetch a random joke from the [Official Joke API](https://official-joke-api.appsp
 node random-joke-fetcher/scripts/fetch-joke.js
 ```
 
+### 4. Tech News Aggregator (`tech-news-aggregator/`)
+Fetches tech news from Hacker News, Dev.to, and Reddit simultaneously. Features trigram deduplication and sentiment ranking.
+
+```bash
+node tech-news-aggregator/scripts/news.js feed --limit=15
+node tech-news-aggregator/scripts/news.js trending
+node tech-news-aggregator/scripts/news.js search "AI"
+```
+
+### 5. Job Hunter (`job-hunter/`)
+A multi-source, relevance-ranked job board aggregator (Remotive, RemoteOK, Jobicy, Arbeitnow, Instahyre, LeetCode) featuring experience level filtering, salary parsing, and ANSI-coloured job cards.
+
+```bash
+node job-hunter/scripts/jobs.js search "backend developer" --exp=4 --remote
+node job-hunter/scripts/jobs.js salary "react developer"
+node job-hunter/scripts/jobs.js latest "devops"
+```
+
 ## Requirements
 
 - Node.js v18+ (uses native `fetch`)
